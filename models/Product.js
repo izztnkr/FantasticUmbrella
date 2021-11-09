@@ -11,28 +11,28 @@ class Product extends Model {}
 Product.init(
   {
     id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     product_name: {
-      type: sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
-      type: Sequelize.DECIMAL,
+      type: DataTypes.DECIMAL,
       allowNull: false,
       isDecimal: true,
     },
     stock: {
-      type: sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defautValue: 10,
       isNumeric: true,
     },
     category_id: {
-      type: sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         // This is a reference to another model
         model: Category,
